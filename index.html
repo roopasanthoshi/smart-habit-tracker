@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Task Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Smart Task Dashboard</h1>
+
+    <button id="darkToggle">🌙 Toggle Dark Mode</button>
+
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Task Title" required>
+        <textarea id="description" placeholder="Task Description"></textarea>
+
+        <input type="date" id="dueDate">
+
+        <div>
+            <p><strong>Priority:</strong></p>
+            <label><input type="radio" name="priority" value="Low" checked> Low</label>
+            <label><input type="radio" name="priority" value="Medium"> Medium</label>
+            <label><input type="radio" name="priority" value="High"> High</label>
+        </div>
+
+        <div>
+            <p><strong>Category:</strong></p>
+            <label><input type="radio" name="category" value="Work" checked> Work</label>
+            <label><input type="radio" name="category" value="Personal"> Personal</label>
+            <label><input type="radio" name="category" value="Study"> Study</label>
+        </div>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="stats"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+    <h2>🏆 Reward Points: <span id="points">0</span></h2>
+    <h3 id="level"></h3>
+    <div id="badges"></div>
+
+    <div id="taskContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
