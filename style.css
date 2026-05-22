@@ -1,0 +1,179 @@
+/* Gradient Background */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+/* Glass Effect Container */
+form,
+.filters,
+#stats,
+#taskContainer,
+h2 {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Radio Buttons */
+label {
+    margin-right: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Add Task Button */
+form button {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Filter Buttons */
+.filters button {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    margin-right: 10px;
+}
+
+.filters button:hover {
+    transform: scale(1.05);
+}
+
+/* Task Cards */
+.task-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Priority Indicators */
+.high {
+    border-left: 6px solid #ff4b5c;
+}
+
+.medium {
+    border-left: 6px solid #ffa500;
+}
+
+.low {
+    border-left: 6px solid #2ecc71;
+}
+
+/* Completed Style */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Reward Points Section */
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Stats Section */
+#stats p {
+    color: white;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+/* Dark Mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .task-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+#progressBar {
+    height: 20px;
+    width: 0%;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* Overdue */
+.overdue {
+    border: 2px solid red;
+}
+
+/* Pinned */
+.pinned {
+    border: 2px solid gold;
+}
